@@ -1,3 +1,5 @@
+import { Controllers } from "@generated/api";
+
 export const dataSources = () => ({
-  // libraryApi: new LibraryAPI(),
+  listsApi: new Controllers("http://localhost:8090/"),
 });

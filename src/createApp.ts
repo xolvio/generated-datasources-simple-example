@@ -6,16 +6,15 @@ import { appContext } from "@app/context";
 import { dataSources } from "./dataSources";
 import { root } from "./root";
 
-
-export const createApp =  () => {
+export const createApp = () => {
   const app = express();
 
   app.use([cookieParser()]);
 
   const corsOptions = {
-    origin: 'http://localhost:3000',
-    credentials: true
-  }
+    origin: "http://localhost:3000",
+    credentials: true,
+  };
 
   const apollo = new ApolloServer({
     schema,
@@ -27,4 +26,3 @@ export const createApp =  () => {
 
   return app;
 };
-

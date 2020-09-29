@@ -1,0 +1,11 @@
+type List {
+  name: String!
+}
+
+extend type Query {
+  GetAllLists: [List!]!
+}
+
+extend type Mutation {
+  AddList(name: String!): List!
+}
